@@ -12,11 +12,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StyleRes;
-import androidx.core.app.ActivityCompat;
-import androidx.appcompat.app.AlertDialog;
+import android.support.annotation.NonNull;
+import android.support.annotation.StyleRes;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Patterns;
@@ -50,6 +49,8 @@ import java.util.List;
 
 import com.facebook.react.modules.core.PermissionListener;
 import com.facebook.react.modules.core.PermissionAwareActivity;
+
+import javax.annotation.Nullable;
 
 import static com.imagepicker.utils.MediaUtils.*;
 import static com.imagepicker.utils.MediaUtils.createNewFile;
@@ -515,7 +516,8 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
     return getReactApplicationContext();
   }
 
-  public @StyleRes int getDialogThemeId()
+  public @StyleRes
+  int getDialogThemeId()
   {
     return this.dialogThemeId;
   }
